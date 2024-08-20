@@ -299,6 +299,7 @@
     align-items: center; /* Vertically centers content inside the section */
     justify-content: flex-end; /* Aligns image to the right */
     height: 100%; /* Make the section full height if needed */
+    width: 100%;
 }
 
 .breaker img {
