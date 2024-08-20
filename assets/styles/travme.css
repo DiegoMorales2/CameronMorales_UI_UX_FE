@@ -371,7 +371,7 @@
   }
 
   .user-persona {
-    background: url(/travme_casestudy/assets/images/user-persona.png);
+    background: url(../images/user-persona.png);
     background-color: #fff;
     height: 150vh;
     background-repeat: no-repeat;
@@ -424,7 +424,7 @@
   }
 
   .userflow{
-    background: url(/travme_casestudy//assets/images/userflow.png);
+    background: url(../images/userflow.png);
     background-color: #fff;
     height: 290vh;
     background-repeat: no-repeat;
@@ -536,7 +536,7 @@
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
-    background: url(/travme_casestudy/assets/images/hope4travmebottom.png);
+    background: url(../images/hope4travmebottom.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 35vh;
