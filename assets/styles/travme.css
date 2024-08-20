@@ -1,0 +1,771 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#travme-body {
+    font-family: 'DM Sans', sans-serif;
+    /* background-color: #111; */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.link-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .resume {
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+.headernav {
+    border-bottom: 1px solid #2C2C2C;
+    background: #141414;
+    overflow: hidden;
+  }
+  
+  .headernav ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+  }
+  
+  .headernav li{
+    height: 50px;
+  }
+  
+  .headernav a{
+    height: 100%;
+    padding: 0 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+  }
+  
+  .headernav a:hover {
+    background-color: #222222;
+  }
+  
+  .headernav li:first-child {
+    margin-right: auto;
+    font-size: 24px;
+  }
+
+  #header-nav .sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    backdrop-filter: fill;
+    box-shadow: 0px 2px 40.91px -12.003px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    margin: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  #header-nav .sidebar li{
+    width: 100%;
+    
+  }
+  
+  
+  
+  #header-nav .sidebar a{
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    color: white;
+  }
+  
+  #header-nav .sidebar a:hover{
+    background-color: black;
+  }
+  #desktop-links{
+    display: none;
+  }
+
+  .desktopnav span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    display: none;
+  }
+
+  .desktopnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktopnav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktopnav button {
+    border-radius: 25px;
+    border: 1px solid #0A0A0A;
+    background: #282828;
+    color: white;
+    padding: .5rem 1.2rem;
+    width: fit-content;
+  }
+
+  .desktopnav button:hover {
+    background: linear-gradient(90deg, #AB42D5 0%, #FF6FE5 100%);
+    box-shadow: 0px 0px 11.9px -2px #571752;
+  }
+
+  .hero-section {
+    background: url(../images/travme\ bg\ hero.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+
+  .hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95%;
+    color: white;
+    gap: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75%;
+    margin-top: 6rem;
+
+  }
+
+  .brand-contain {
+    
+    width: 85%;
+  }
+
+  .project-contain, .summary-contain, .respond-contain {
+    width:25%;
+  }
+
+  .brand-contain h2, .project-contain h2, .summary-contain h2, .respond-contain h2 {
+    color: #EBEBEB;
+    font-family: "DM Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    margin-bottom: 1rem;
+  }
+
+  .brand-contain span {
+    color: #FFF;
+    font-family: "Archivo Black";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .project-contain span {
+    color: #FFF;
+    font-family: "Bebas Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .respond-contain ul {
+    list-style-type: none;
+  }
+
+  .respond-contain li {
+    margin-bottom: .5rem;
+  }
+
+  .begin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #F1F1F1;
+  }
+
+  .begin-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .begin-info {
+    width: 50%;
+  }
+
+  .begin-info p, .scope-contain p, .solutions-info p, .refine-info p, .looks-info p, .conclusion-info p {
+    color: #404040;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+  }
+
+  .begin-info p {
+    width: 75%;
+  }
+
+  .scope-contain p {
+    width: 50%;
+  }
+
+  .begin-info h1, .scope-contain h1, .solutions-info h1, .uxoption h1, .define-info h1, .refine-info h1, .looks-info h1, .conclusion-info h1, .credits h1 {
+    font-family: 'DM Sans';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    width: fit-content;
+  }
+
+  .scope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    background: #ffffff;
+  }
+
+  .scope-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 99%;
+  }
+
+  .scope-contain {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+  }
+
+  .scope-info h2 {
+    color: #B1B1B1;
+    font-family: "DM Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .scope-info svg, .solutions-contain svg {
+    margin-right: 1rem;
+  }
+
+  .breaker {
+    background-color: #000;
+  }
+
+  .breaker {
+    display: flex;
+    align-items: center; /* Vertically centers content inside the section */
+    justify-content: flex-end; /* Aligns image to the right */
+    height: 100%; /* Make the section full height if needed */
+}
+
+.breaker img {
+    width: 50%;
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.solutions {
+    background-color: #fff;
+    padding: 8rem 002rem;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.solutions-contain h2 {
+    color: #B1B1B1;
+    font-family: "DM Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .solutions-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+  }
+
+  .uxoption {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+  }
+
+  .defining, .conclusion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    color: white;
+    background-color: #000;
+  }
+
+  .define-info p, .conclusion p {
+    color: #D3D3D3;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+    width: 100%;
+  }
+
+  .define-info, .conclusion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+  }
+
+  .user-persona {
+    background: url(/travme_casestudy/assets/images/user-persona.png);
+    background-color: #fff;
+    height: 150vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .refine {
+    background-color: #fff;
+    padding: 8rem 2rem 8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .refine-sub h2 {
+    color: #B1B1B1;
+    font-family: "DM Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .refine-sub svg {
+    margin-right: 1rem;
+  }
+
+  .refine-info p {
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+    width: 100%;
+    color: #404040;
+  }
+
+  .refine-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+  }
+
+  .userflow{
+    background: url(/travme_casestudy//assets/images/userflow.png);
+    background-color: #fff;
+    height: 290vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .looks-section {
+    padding: 8rem 2rem 8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem;
+    background-color: lightgray;
+  }
+
+  .looks-sub {
+    display: flex;
+  }
+
+  .looks-info {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+
+  .looks-sub h2 {
+    color: #B1B1B1;
+    font-family: "DM Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .looks-sub svg {
+    margin-right: 1rem;
+  }
+
+  .neosquare {
+    width: 15%;
+    height: 300px;
+    border-radius: 25px;
+    background: #d3d3d3;
+    box-shadow:  20px 20px 60px #b3b3b3,
+                -20px -20px 60px #f3f3f3;
+  }
+
+  .final-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    
+  }
+ 
+  .credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem 8rem 2rem;
+    background-color: #FFF;
+  }
+
+  .credits aside {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .credit-info {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .credit-info h2 {
+    color: #7c7c7c;
+    font-family: "DM Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.44px;
+  }
+
+  .credit-info ul {
+    list-style-type: none;
+  }
+
+  .credit-info li:nth-child(1) {
+    margin-top: 1rem;
+  }
+
+  .credit-info li {
+    margin-top: .5rem;
+    font-weight: 500;
+  }
+
+  .next-project {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    background: url(/travme_casestudy/assets/images/hope4travmebottom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    color: white;
+    gap: 2em;
+  }
+
+  .next-project h1 {
+    width: 100%;
+  }
+
+  .project-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-info h1 {
+    font-size: 2rem;
+  }
+
+  #project-btn {
+    border: solid 2px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #FFF;
+    font-family: 'outfit';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  #project-btn:hover {
+    background-color: #fff;
+    color: #006cda;
+  }
+
+
+  footer {
+    background: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  footer ul {
+    list-style-type: none;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #9D9D9D;
+  } 
+
+  footer h4 {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (min-width: 800px){
+    #desktop-links{
+      display: flex;
+    }
+  
+    .desktopnav span{
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: .8rem;
+      margin-left: .2rem;
+    }
+
+    #menuButton-on {
+      display: none;
+    }
+
+    .headernav button {
+      margin: 0 1rem;
+  }
+
+  .user-persona, .userflow {
+    background-size: contain;
+  }
+
+  .user-persona {
+    height: 100vh;
+    background-position: center;
+    margin-top: 8rem;
+  }
+
+  .userflow {
+    height:200vh;
+    background-position: center;
+    margin-top: 4rem;
+  }
+
+  .looks-section {
+    gap: 5rem;
+  }
+
+  .looks-info {
+    width: 45%;
+  }
+
+
+
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+  .hero-info {
+    margin-top: 5rem;
+    width: 100%;
+    gap: 1.5rem;
+    height: 100vh;
+  }
+
+  .project-contain, .summary-contain, .respond-contain {
+    width: 85%;
+}
+
+  .hero-section{
+    height: 100vh;
+  }
+
+  .begin {
+    flex-direction: column;
+  }
+
+  .solutions-info {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .begin-info, .define-info, .refine-info, .looks-info, .conclusion-info {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .begin-image {
+    margin-top: 3rem;
+  }
+
+  .begin-info p, .scope-info p, .refine-info p, .looks-info p, .conclusion-info p {
+    width: 100%;
+  }
+
+  .scope-info {
+    flex-direction: column;
+  }
+
+  .scope-info h2 {
+    width: fit-content;
+  }
+
+  .breaker {
+    flex-direction: column;
+  }
+
+  .breaker img {
+    width: 100%;
+  }
+
+  .solutions {
+    flex-direction: column
+  }
+
+  .solutions-contain h2 {
+    width: fit-content;
+  }
+
+  .user-persona {
+    display: none;
+  }
+
+  .refine {
+    flex-direction: column;
+  }
+
+  .userflow {
+    display: none;
+  }
+
+  .looks-section {
+    flex-direction: column;
+  }
+
+  .neosquare {
+    width: 100%;
+  }
+
+  .looks-info h1 {
+    width: 300px;
+  }
+
+  .credit-info {
+    flex-direction: column;
+  }
+
+  .next-project {
+    height: 50vh;
+    gap: 8rem;
+  }
+
+}
