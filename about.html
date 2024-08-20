@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Twitter -->
+     <meta content="About" property="og:title">
+     <meta content="About" property="twitter:title">
+    <!-- // Google Fonts // -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- // Google Fonts // -->
+     <link rel="stylesheet" href="./assets/styles/style.css">
+     <link rel="stylesheet" href="../UX_UI_HW_19/assets/styles/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body id="about-body">
+    <header class="nav-container">
+
+        <!-- <img src="./assets/images/mobile-menu.svg" alt="mobile-menu" id="mobile-cta" class="mobile-menus">
+        <img src="./assets/images/Vector.svg" alt="mobile-exit"id="mobile-menu-exit" class="mobile-menus"> -->
+
+        <nav id="header-nav" class="headernav">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#" class="navbar"><svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 25L25 1M1 1L25 25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a></li>
+                <li><a href="./" class="navbar">About</a></li>
+                <!-- <li><a href="" class="navbar">Work</a></li> -->
+                <li><a href="mailto:diego.morales5048@gmail.com" class="navbar">Contact</a></li>
+            </ul>
+            <ul class="desktopnav">
+                <li><a href="./">CAMERON <span>UI/UX Designer & Front-End Developer</span></a></li>
+                <li><a href="about" id="desktop-links">About</a></li>
+                <!-- <li><a href="" id="desktop-links">Work</a></li> -->
+                <!-- <li><a href="" id="desktop-links">Photgraphy</a></li> -->
+                <li><button id="desktop-button">Contact</button></li>
+                <li onclick=showSidebar()><a href="#" class="navbar" id="menuButton-on"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                    <path d="M1.8418 1.75879H18.3457M1.8418 7.01003H18.3457M1.8418 12.2613H18.3457" stroke="white" stroke-width="2.00047" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="heroimg">
+        <!-- <img src="./assets/images/hero-img.png" alt="Macbook half-tilted with warm ambient light" class="hero-img-background"> -->
+        <h1 class="hero-text">CAMERON IS A DESIGNER WHO THRIVES ON MAKING DIGITAL EXPERIENCES MEMORABLE.</h1>
+    </section>
+
+    <section class="about-section">
+        <aside class="container">
+            <img src="./assets/images/cameron-morales.png" alt="Cameron Morales headshot">
+            <blockquote>I don't usually like pictures of myself, but I'm rather proud of this moment in my journey, so in the bio it goes. If you want to chat, golf, or grab a drink and talk design, don't hesitate to send me an email or a tweet.</blockquote>
+        </aside>
+
+        <aside class="about-me-section">
+            <h3>ABOUT CAMERON MORALES</h3>
+            <p>Cameron Morales is a designer originally from Idalou, TX, with a passion for exploring and creating. Growing up in a small town, Cameron always knew he was destined for something greater. His journey began at 14 when he learned Java and built his first computer, sparking an interest in design and technology. This passion led him to pursue an architecture degree in Santa Monica before returning to Texas to pursue a graphic design degree.
+            </p>
+            <p>At UTSA, Cameron refined his UX/UI skills, mastering techniques in HTML, CSS, and JavaScript, and discovering a new hobby in coding. His versatile skill set also extends to cinematography and photography, allowing him to tackle diverse challenges and build amazing websites.
+            </p>
+            <p>Cameron enjoys going to the gym, golfing, and spending time with friends and family. His love for design and storytelling drives him to create impactful and user-friendly experiences. Whether he's behind the camera or crafting prototypes, Cameron brings creativity and quality to every project.</p>
+        </aside>
+
+        <aside>
+            <section class="digital">
+                <h3>DIGITAL CAPABILITIES</h3>
+                <ul>
+                    <li>Websites</li>
+                    <li>IOS and Android Apps</li>
+                    <li>Research</li>
+                </ul>
+            </section>
+
+            <section class="brand">
+                <h3>BRAND CAPABILITIES</h3>
+                <ul>
+                    <li>Cinematography</li>
+                    <li>Photography</li>
+                    <li>Post-Production</li>
+                </ul>
+            </section>
+        </aside>
+    </section>
+
+    <div class="line-seperator">
+        <img src="./assets/images/Line 193.svg" alt="">
+    </div>
+
+    <section class="contact-section">
+        <h2 id="contact-header">Contact</h2>
+        <div class="contact-links" id="contact-linksall">
+            <h3>LET'S WORK TOGETHER</h3>
+            <ul>
+                <li><a href="mailto:diego.morales5048@gmail.com">diego.morales5048@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/cameron-morales-7190a62b8/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.behance.net/cameronmorales" target="_blank">Behance</a></li>
+            </ul>
+        </div>
+
+        <div class="experience" id="experience-all">
+            <h3>EXPERIENCE</h3>
+            <ul>
+                <li>Shift Manager at Chick fil a</li>
+                <li>Freelance Designer</li>
+                <li>Team Lead at Target</li>
+                <li>Freelance Photographer</li>
+                <li>Freelance Cinematographer</li>
+            </ul>
+
+            <a href="./assets/CAMERON-MORALES-RESUME.zip" download class="resume">Download Resume</a>
+        </div>
+    </section>
+    <button class="resume-button" id="button-resume">Download Resume</button>
+    <footer>
+
+        <aside>
+            <ul>
+                <li><h4>Sitemap</h4></li>
+                <li><a href="./">Home</a></li>
+                <li><a href="travme">Projects</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+
+        <aside>
+            <ul>
+                <li><h4>Other</h4></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </aside>
+
+        <aside>
+            <ul>
+                <li><h4>Contact</h4></li>
+                <li><a href="mailto:diego.morales5048@gmail.com">diego.morales5048@gmail.com</a></li>
+                <li><a href="./assets/images/CAMERON-MORALES-RESUME.zip" download class="resume">Download Resume</a></li>
+            </ul>
+        </aside>
+
+        <aside class="container-two">
+            <h4>Follow Me</h4>
+            <div class="link-container">
+                <div class="round-links"><a href="#"><img src="./assets/images/Twitter small.svg" alt="Twitter"></a></div>
+                <div class="round-links"><a href="#"><img src="./assets/images/Instagram Small.svg" alt="Instagram"></a></div>
+                <div class="round-links"><a href="#"><img src="./assets/images/Tiktok Small.svg" alt="Tiktok"></a></div>
+                <div class="round-links"><a href="#"><img src="./assets/images/facebook small.svg" alt="Facebook"></a></div>
+            </div>
+            <div class="copycontainer">
+                <div class="copyright"><p>C</p></div>
+                <p>2024</p>
+            </div>
+        </aside>
+
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+        </script>
+</body>
+</html>
