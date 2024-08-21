@@ -377,6 +377,7 @@
     height: 150vh;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
   }
 
   .refine {
@@ -430,7 +431,7 @@
     height: 290vh;
     background-repeat: no-repeat;
     background-size: cover;
-
+    width: 100%;
   }
 
   .looks-section {
@@ -543,6 +544,7 @@
     height: 35vh;
     color: white;
     gap: 2em;
+    width: 94%;
   }
 
   .next-project h1 {
