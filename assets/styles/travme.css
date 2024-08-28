@@ -11,6 +11,9 @@
     flex-direction: column;
     min-height: 100vh;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .link-container {
@@ -299,6 +302,7 @@
     align-items: center; /* Vertically centers content inside the section */
     justify-content: flex-end; /* Aligns image to the right */
     height: 100%; /* Make the section full height if needed */
+    width: 100%;
 }
 
 .breaker img {
@@ -424,11 +428,10 @@
   }
 
   .userflow{
-    background: url(../images/userflow.png);
-    background-color: #fff;
-    height: 290vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 4rem;
 
   }
 
@@ -535,13 +538,14 @@
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0;
     background: url(../images/hope4travmebottom.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 35vh;
     color: white;
     gap: 2em;
+    width: 88%;
   }
 
   .next-project h1 {

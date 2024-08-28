@@ -442,10 +442,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
+    max-width: 60%;
+
   }
 
   .first-section {
@@ -460,17 +462,15 @@ body {
   .first-section img {
     display: flex;
     transform: scale(.8);
-    position: absolute;
-    top: 13%;
-    right: -5%;
   }
 
   .container-first h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .container-first p {
     width: 50%;
+    font-size: 1.5rem;
   }
 
   .tools {
@@ -486,10 +486,9 @@ body {
 @media only screen and (min-width: 1400px){
   .first-section img {
     display: flex;
-    transform: scale(1);
-    position: absolute;
-    top: 7.5%;
-    right: 5%;
+    transform: scale(.8);
+    justify-content: center;
+    align-items: center;
   }
 
   .tools {
