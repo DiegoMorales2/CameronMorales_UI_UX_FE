@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    /* background-color: #111; */
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+.headernav {
+    border-bottom: 1px solid #2C2C2C;
+    background: #141414;
+    overflow: hidden;
+  }
+  
+  .headernav ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+  }
+  
+  .headernav li{
+    height: 50px;
+  }
+  
+  .headernav a{
+    height: 100%;
+    padding: 0 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+  }
+  
+  .headernav a:hover {
+    background-color: #222222;
+  }
+  
+  .headernav li:first-child {
+    margin-right: auto;
+    font-size: 24px;
+  }
+
+  #header-nav .sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    backdrop-filter: fill;
+    box-shadow: 0px 2px 40.91px -12.003px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    margin: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  #header-nav .sidebar li{
+    width: 100%;
+    
+  }
+  
+  
+  
+  #header-nav .sidebar a{
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    color: white;
+  }
+  
+  #header-nav .sidebar a:hover{
+    background-color: black;
+  }
+  #desktop-links{
+    display: none;
+  }
+
+  .desktopnav span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    display: none;
+  }
+
+  .desktopnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktopnav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktopnav button {
+    border-radius: 25px;
+    border: 1px solid #0A0A0A;
+    background: #282828;
+    color: white;
+    padding: .5rem 1.2rem;
+    width: fit-content;
+  }
+
+ button:hover {
+    background: linear-gradient(90deg, #AB42D5 0%, #FF6FE5 100%);
+    box-shadow: 0px 0px 11.9px -2px #571752;
+  }
+
+  .container-first {
+    background: linear-gradient(270deg, #FFF 11.14%, #959595 83.22%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .first-section {
+    background-color: #0A0A0A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 55vh;
+  }
+
+  .first-section img {
+    display: none;
+  }
+
+  .container-first h1 {
+    font-size: 2rem;
+  }
+
+  .tools {
+    display: flex;
+    padding: 1rem .5rem;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    border-top: 0.75px solid #2B2B2B;
+    border-bottom: 0.75px solid #2B2B2B;
+    background: #151515;
+  }
+
+  .svglinks {
+    transform: scale(.8);
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .travme {
+    padding: 3rem 3rem 0rem 3rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+    background: linear-gradient(72deg, #F6A525 3.98%, #F7AC39 14.33%, #F8B75C 50.78%, #FFC082 93.97%);
+  }
+
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+  }
+
+
+  .travme aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+  }
+
+  .travme h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .travme p {
+    color: #FFF9CD;
+  }
+
+  .travme h3 {
+    color: #FFF9CD;
+  }
+
+  .nsa {
+    padding: 3rem 3rem 0rem 3rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+    background: linear-gradient(72deg, #49B51A 3.98%, #60CB2F 21.08%, #89E756 44.93%, #9BE853 61.12%, #A8F161 77.77%, #C6E857 93.97%);
+  }
+
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+  }
+
+
+  .nsa aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+  }
+
+  .nsa h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .nsa p {
+    color: #e7ffdc;
+  }
+
+  .nsa h3 {
+    color: #e7ffdc;
+  }
+
+  .hope4kids {
+    padding: 3rem 3rem 0rem 3rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+    background: linear-gradient(72deg, #254F87 3.98%, #47a6c5 57.47%, #4bc5ce 82.17%, #61F3F8 93.97%);
+  }
+
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+  }
+
+
+  .hope4kids aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+  }
+
+  .hope4kids h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .hope4kids p {
+    color: #CFF0FE;
+  }
+
+  .hope4kids h3 {
+    color: #CFF0FE;
+  }
+
+  .fitbud {
+    padding: 3rem 3rem 0rem 3rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+    background: linear-gradient(72deg, #69259D 3.98%, #CE3CD0 61.53%, #F15BFF 93.97%);
+  }
+
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+  }
+
+
+  .fitbud aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+  }
+
+  .fitbud h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .fitbud p {
+    color: #F8CFFE;
+  }
+
+  .fitbud h3 {
+    color: #F8CFFE;
+  }
+
+  .casestudy-btn {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border: solid 2px #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .casestudy-btn:hover {
+    background-color: #fff;
+    color: #000000;
+  }
+
+  footer {
+    background: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  footer ul {
+    list-style-type: none;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #9D9D9D;
+  } 
+
+  footer h4 {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .resume {
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+  .link-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .round-links {
+  border-radius: 200px;
+  border: 0.5px solid #606060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  }
+
+  .round-links a {
+    height: 20px;
+  }
+
+  .copyright {
+    display: inline-flex;
+    padding: 0px 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    color: white;
+  }
+
+  .copycontainer {
+    display: flex;
+    gap: .5rem;
+    color: white;
+  }
+
+  .container-two {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  footer li {
+    margin-top: .5rem;
+  }
+
+  @media only screen and (min-width: 800px){
+    #desktop-links{
+      display: flex;
+    }
+  
+    .desktopnav span{
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: .8rem;
+      margin-left: .2rem;
+    }
+
+    #menuButton-on {
+      display: none;
+    }
+
+    .headernav button {
+      margin: 0 1rem;
+  }
+
+  
+  .container-first {
+    background: linear-gradient(270deg, #FFF 11.14%, #959595 83.22%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 60%;
+
+  }
+
+  .first-section {
+    background-color: #0A0A0A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 55vh;
+  }
+
+  .first-section img {
+    display: flex;
+    transform: scale(.8);
+  }
+
+  .container-first h1 {
+    font-size: 4rem;
+  }
+
+  .container-first p {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+
+  .tools {
+    gap: 3rem;
+}
+
+.travme, .nsa, .fitbud, .hope4kids {
+  gap: 4rem;
+}
+
+}
+
+@media only screen and (min-width: 1400px){
+  .first-section img {
+    display: flex;
+    transform: scale(.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tools {
+    gap: 5rem;
+}
+
+.travme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "title title"
+    "travmeaside travmeimg";
+  gap: 3rem; /* Adjust gap between items if needed */
+}
+
+.title {
+  grid-area: title;
+}
+
+.travmeaside {
+  grid-area: travmeaside;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.travmeimg {
+  grid-area: travmeimg;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nsa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "title title"
+    "travmeaside travmeimg";
+  gap: 3rem; /* Adjust gap between items if needed */
+}
+
+.hope4kids {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "title title"
+    "travmeaside travmeimg";
+  gap: 3rem; /* Adjust gap between items if needed */
+}
+
+.fitbud {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "title title"
+    "travmeaside travmeimg";
+  gap: 3rem; /* Adjust gap between items if needed */
+}
+
+.travme aside {
+  align-items: baseline;
+}
+
+.nsa aside {
+  align-items: baseline;
+}
+
+.hope4kids aside {
+  align-items: baseline;
+}
+
+.fitbud aside {
+  align-items: baseline;
+}
+
+footer {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+}
