@@ -7,3 +7,8 @@ function hideSidebar(){
     sidebar.style.display = 'none'
 }
 
+function scrollToProjectSection() {
+    document.querySelector('#project-section').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }

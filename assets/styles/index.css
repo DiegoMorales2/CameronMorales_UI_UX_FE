@@ -6,7 +6,7 @@
 body {
     font-family: 'DM Sans', sans-serif;
     /* background-color: #111; */
-    background-color: lightgray;
+    background-color: #131313;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -35,11 +35,12 @@ body {
   
   .headernav a{
     height: 100%;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: rgb(255, 255, 255);
+    font-size: 1.5rem;
   }
   
   .headernav a:hover {
@@ -49,6 +50,7 @@ body {
   .headernav li:first-child {
     margin-right: auto;
     font-size: 24px;
+    font-weight: 600;
   }
 
   #header-nav .sidebar {
@@ -126,19 +128,389 @@ body {
   }
 
   .container-first {
-    background: linear-gradient(270deg, #FFF 11.14%, #959595 83.22%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #D8D8D8;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
+    font-size: 82px;
+    width: 100%;
   }
 
+
+  .container-first span {
+    color: #D8D8D8;
+    font-size: 82px;
+    width: fit-content;
+    margin-left: 15rem;
+  }
+
+  .container-first  h1 {
+      font-size: 82px;
+      width: 90%;
+      max-width: 1200px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .glow-border-button {
+    position: relative;
+    background-color: #282828;
+    border-radius: 16px;
+    padding: 15px 30px;
+    border: 2px solid #707070;
+    display: inline-block;
+    overflow: visible; /* Changed to visible to allow the dot to move outside the border */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glow-border-button:hover {
+    box-shadow: 0 0 15px #ffe9ad;
+    cursor: pointer;
+  }
+  
+  .glow-border-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    border: 2px solid #707070;
+    box-sizing: border-box;
+  }
+  
+  .glow-border-button::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    /* filter: blur(2.9px); */
+    background: #fbffd4;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #ff371c;
+    animation: move-dot 5s linear infinite;
+  }
+  
+  @keyframes move-dot {
+    0% {
+      top: -6px;  /* Moves the dot outside the top edge */
+      left: -6px; /* Moves the dot outside the left edge */
+    }
+    25% {
+      top: -6px;
+      left: calc(100% - 6px); /* Aligns the dot on the right border */
+    }
+    50% {
+      top: calc(100% - 6px); /* Aligns the dot on the bottom border */
+      left: calc(100% - 6px);
+    }
+    75% {
+      top: calc(100% - 6px);
+      left: -6px; /* Moves the dot back to the left border */
+    }
+    100% {
+      top: -6px;
+      left: -6px; /* Moves the dot back to the top-left corner */
+    }
+  }
+
+
+  .sayhello {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Proportions for even spacing */
+    gap: 40px; /* Larger gap for even spacing */
+    align-items: center; /* Vertically align items */
+    justify-items: center; /* Horizontally center items */
+    padding: 40px; /* Padding around the whole section */
+    background-color: #121212; /* Dark background color */
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.connect-container h3 {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.connect-circle {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    fill: #262626;
+    box-shadow: 1px 2px 5.3px 0px rgba(94, 94, 94, 0.25) inset;
+    filter: drop-shadow(0px 3px 9.2px rgba(0, 0, 0, 0.76));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.connect-circle {
+  background-color: #262626;
+  border-radius: 50%;
+}
+
+.connect-circle:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.connect-circle img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    object-fit: contain;
+}
+
+.aboutme {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: left; /* Align the text to the left */
+    background-color: transparent; /* Match the background of the section */
+    max-width: 900px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.case-study {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 40px;
+  background: url(../images/Frame\ 216.svg);
+  background-size: cover;
+}
+
+.project-container {
+  background-color: #131313;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+border: 1px solid #2B2B2B;
+background: #151515;
+box-shadow: 0px 2px 48.2px 0px #070707;
+}
+
+.left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 2rem;
+  padding: 0 4rem 0 4rem;
+}
+
+
+.case-study-btn {
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 84px; /* 350% */
+  letter-spacing: -1.2px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 236px;
+  text-decoration: none;
+  height: 58px;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.travme-btn {
+  background: linear-gradient(180deg, #FFC181 0%, #EBA53B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 24px;
+  border: 1px solid #EBA53B;
+}
+
+.travme-btn:hover {
+  color: #151515; /* Text color on hover */
+  background: linear-gradient(94deg, #FFC181 9.42%, #EBA53B 91.16%); /* Gradient background */
+  -webkit-background-clip: padding-box; /* To make sure the background color applies to the whole button */
+  -webkit-text-fill-color: #151515;
+  border-color: transparent; /* You can optionally change the border color */
+}
+
+.nsa-btn:hover{
+  color: #151515; /* Text color on hover */
+  background: linear-gradient(94deg, #C4E856 9.42%, #55BE24 91.16%); /* Gradient background */
+  -webkit-background-clip: padding-box; /* To make sure the background color applies to the whole button */
+  -webkit-text-fill-color: #151515;
+  border-color: transparent; /* You can optionally change the border color */
+} 
+
+.nsa-btn {
+  background: linear-gradient(94deg, #C4E856 9.42%, #55BE24 91.16%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 24px;
+  border: 1px solid #55BE24;
+}
+
+.fitbud-btn:hover{
+  color: #151515; /* Text color on hover */
+  background: linear-gradient(94deg, #F15CFE 9.42%, #7229A3 91.16%); /* Gradient background */
+  -webkit-background-clip: padding-box; /* To make sure the background color applies to the whole button */
+  -webkit-text-fill-color: #151515;
+  border-color: transparent; /* You can optionally change the border color */
+} 
+
+.hope4kids-btn {
+  background: linear-gradient(94deg, #61F0F6 9.42%, #28598E 91.16%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 24px;
+  border: 1px solid #61F0F6;
+}
+
+.hope4kids-btn:hover{
+  color: #151515; /* Text color on hover */
+  background: linear-gradient(94deg, #61F0F6 9.42%, #28598E 91.16%); /* Gradient background */
+  -webkit-background-clip: padding-box; /* To make sure the background color applies to the whole button */
+  -webkit-text-fill-color: #151515;
+  border-color: transparent; /* You can optionally change the border color */
+} 
+
+.fitbud-btn {
+  background: linear-gradient(94deg, #F15CFE 9.42%, #7229A3 91.16%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 24px;
+  border: 1px solid #EF5BFD;
+}
+
+.case-study-image {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.text-content h2 {
+  font-family: "DM Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;  
+}
+
+.text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.details-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.details-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.details-content ul li:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.details-content ul li {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+    background-color: #282828;
+    border-radius: 16px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #F5F5F5;
+    margin: 0;
+    text-align: center;
+  }
+
+  .aboutme {
+    color: #E2DFDF;
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 150% */
+letter-spacing: -1px;
+max-width: 500px;
+  }
+  
+
   .first-section {
-    background-color: #0A0A0A;
+    background: url(../images/View_of_Dallas_from_Reunion_Tower_August_2015_05_edge\ 1.svg);
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,12 +519,10 @@ body {
   }
 
   .first-section img {
-    display: none;
+    display: flex;
+    margin-left: 20rem;
   }
 
-  .container-first h1 {
-    font-size: 2rem;
-  }
 
   .tools {
     display: flex;
@@ -175,169 +545,10 @@ body {
     width: 100%;
   }
 
-  .travme {
-    padding: 3rem 3rem 0rem 3rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6rem;
-    background: linear-gradient(72deg, #F6A525 3.98%, #F7AC39 14.33%, #F8B75C 50.78%, #FFC082 93.97%);
+  .details-content li{
+    margin-top: .5rem;
   }
 
-  .title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-  }
-
-
-  .travme aside {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: white;
-  }
-
-  .travme h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-
-  .travme p {
-    color: #FFF9CD;
-  }
-
-  .travme h3 {
-    color: #FFF9CD;
-  }
-
-  .nsa {
-    padding: 3rem 3rem 0rem 3rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6rem;
-    background: linear-gradient(72deg, #49B51A 3.98%, #60CB2F 21.08%, #89E756 44.93%, #9BE853 61.12%, #A8F161 77.77%, #C6E857 93.97%);
-  }
-
-  .title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-  }
-
-
-  .nsa aside {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: white;
-  }
-
-  .nsa h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-
-  .nsa p {
-    color: #e7ffdc;
-  }
-
-  .nsa h3 {
-    color: #e7ffdc;
-  }
-
-  .hope4kids {
-    padding: 3rem 3rem 0rem 3rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6rem;
-    background: linear-gradient(72deg, #254F87 3.98%, #47a6c5 57.47%, #4bc5ce 82.17%, #61F3F8 93.97%);
-  }
-
-  .title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-  }
-
-
-  .hope4kids aside {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: white;
-  }
-
-  .hope4kids h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-
-  .hope4kids p {
-    color: #CFF0FE;
-  }
-
-  .hope4kids h3 {
-    color: #CFF0FE;
-  }
-
-  .fitbud {
-    padding: 3rem 3rem 0rem 3rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6rem;
-    background: linear-gradient(72deg, #69259D 3.98%, #CE3CD0 61.53%, #F15BFF 93.97%);
-  }
-
-  .title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-  }
-
-
-  .fitbud aside {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: white;
-  }
-
-  .fitbud h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-
-  .fitbud p {
-    color: #F8CFFE;
-  }
-
-  .fitbud h3 {
-    color: #F8CFFE;
-  }
-
-  .casestudy-btn {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    border: solid 2px #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .casestudy-btn:hover {
-    background-color: #fff;
-    color: #000000;
-  }
 
   footer {
     background: #1E1E1E;
@@ -382,8 +593,14 @@ body {
   padding: 1rem;
   }
 
+  .round-links:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
   .round-links a {
     height: 20px;
+
   }
 
   .copyright {
@@ -415,6 +632,12 @@ body {
   @media only screen and (min-width: 800px){
     #desktop-links{
       display: flex;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      flex-direction: row;
+      justify-content: space-around;
     }
   
     .desktopnav span{
@@ -437,18 +660,14 @@ body {
 
   
   .container-first {
-    background: linear-gradient(270deg, #FFF 11.14%, #959595 83.22%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
     display: flex;
-    flex-direction:column;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
-    max-width: 60%;
 
   }
+
 
   .first-section {
     background-color: #0A0A0A;
@@ -461,112 +680,40 @@ body {
 
   .first-section img {
     display: flex;
-    transform: scale(.8);
   }
 
-  .container-first h1 {
+  /* .container-first h1 {
     font-size: 4rem;
-  }
+  } */
 
   .container-first p {
-    width: 50%;
+
     font-size: 1.5rem;
   }
 
-  .tools {
-    gap: 3rem;
-}
+  .first-section img {
+    display: flex;
+    transform: scale(.8);
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+  }
 
-.travme, .nsa, .fitbud, .hope4kids {
-  gap: 4rem;
-}
+  .first-section span {
+    margin-left: 2rem;
+  }
+
 
 }
 
 @media only screen and (min-width: 1400px){
   .first-section img {
     display: flex;
-    transform: scale(.8);
     justify-content: center;
     align-items: center;
   }
 
-  .tools {
-    gap: 5rem;
-}
-
-.travme {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "title title"
-    "travmeaside travmeimg";
-  gap: 3rem; /* Adjust gap between items if needed */
-}
-
-.title {
-  grid-area: title;
-}
-
-.travmeaside {
-  grid-area: travmeaside;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.travmeimg {
-  grid-area: travmeimg;
-  display: flex;
-  align-items: flex-end;
-}
-
-.nsa {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "title title"
-    "travmeaside travmeimg";
-  gap: 3rem; /* Adjust gap between items if needed */
-}
-
-.hope4kids {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "title title"
-    "travmeaside travmeimg";
-  gap: 3rem; /* Adjust gap between items if needed */
-}
-
-.fitbud {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "title title"
-    "travmeaside travmeimg";
-  gap: 3rem; /* Adjust gap between items if needed */
-}
-
-.travme aside {
-  align-items: baseline;
-}
-
-.nsa aside {
-  align-items: baseline;
-}
-
-.hope4kids aside {
-  align-items: baseline;
-}
-
-.fitbud aside {
-  align-items: baseline;
-}
+  
 
 footer {
   flex-direction: row;
@@ -574,4 +721,56 @@ footer {
 }
 
 
+}
+
+@media only screen and (max-width: 800px){
+  .first-section {
+    background-color: #0A0A0A;
+  }
+
+
+  .container-first h1 {
+    font-size:  42px;
+  }
+
+  .first-section img {
+    display: none;
+    transform: scale(.6);
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .first-section span {
+    margin-left: 0;
+    font-size: 31px;
+    text-wrap: nowrap
+}
+
+  .sayhello {
+    display: flex;
+    flex-direction: column;
+    background-color: #131313;
+    background-size: cover;
+    
+  }
+
+  .aboutme {
+    max-width: 78%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+    
+  .details-content {
+    gap: 1rem;
+    width: 100%;
+  }
 }

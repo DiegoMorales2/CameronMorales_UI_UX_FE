@@ -138,8 +138,9 @@
   }
 
   .hero-section {
-    background: url(../images/travme\ bg\ hero.png);
+    background: url(../images/hope4kidsbg-hero.png);
     background-size: cover;
+    background-position: bottom;
     display: flex;
     justify-content: center;
     align-items: center;
