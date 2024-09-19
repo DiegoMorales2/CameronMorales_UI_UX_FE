@@ -241,6 +241,7 @@
 
   .scope-contain p {
     width: 50%;
+    color: #e2e2e2;
   }
 
   .begin-info h1, .scope-contain h1, .solutions-info h1, .uxoption h1, .define-info h1, .refine-info h1, .looks-info h1, .conclusion-info h1, .credits h1 {
@@ -253,12 +254,17 @@
     width: fit-content;
   }
 
+  .scope-contain h1 {
+    color: #ffffff;
+    max-width: 600px;
+  }
+
   .scope {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 8rem 2rem;
-    background: #ffffff;
+    background: #313131;
   }
 
   .scope-info {
@@ -276,7 +282,7 @@
   }
 
   .scope-info h2 {
-    color: #B1B1B1;
+    color: #ffffff;
     font-family: "DM Mono";
     font-size: 16px;
     font-style: normal;
@@ -295,7 +301,7 @@
   }
 
   .breaker {
-    background-color: #000;
+    background-color: #ffffff;
   }
 
   .breaker {
@@ -342,12 +348,40 @@
     width: 50%;
   }
 
+  .solutions-info p {
+    max-width: 1000px;
+  }
+
   .uxoption {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     background-color: #fff;
   }
+
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: 300px auto; /* Fixed height for the first row, auto for the second */
+    gap: 10px; /* Spacing between images */
+}
+
+.img-grid .img-1, .img-grid .img-2 {
+    grid-row: 1; /* Both images occupy the first row */
+}
+
+.img-grid .img-3 {
+    grid-column: 1 / 3; /* Span both columns */
+    grid-row: 2; /* Occupy the second row */
+}
+
+.img-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits within its container */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
 
   .defining, .conclusion {
     display: flex;
