@@ -55,6 +55,53 @@ body {
     
   }
 
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .contact-container {
+    position: relative;
+    background-color: #282828;
+    border-radius: 16px;
+    padding: 15px 30px;
+    display: inline-block;
+    
+  }
+
+  .contact-container::after, .contact-container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    padding: 2px;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 90%,#FFDB00FF);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 18px;
+    animation: 3s spin linear infinite;
+  }
+
+  .contact-container::before {
+    filter: blur(.5rem);
+    opacity: 0.5;
+  }
+
+ 
+
+  @keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+
   #header-nav .sidebar {
     position: absolute;
     top: 0;
@@ -177,45 +224,7 @@ body {
       flex-wrap: wrap;
   }
 
-  .glow-border-button {
-    position: relative;
-    background-color: #282828;
-    border-radius: 16px;
-    padding: 15px 30px;
-    border: 2px solid #707070;
-    display: inline-block;
-    overflow: visible; /* Changed to visible to allow the dot to move outside the border */
-    transition: box-shadow 0.3s ease;
-  }
   
-  .glow-border-button:hover {
-    box-shadow: 0 0 15px #ffe9ad;
-    cursor: pointer;
-  }
-  
-  .glow-border-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    border: 2px solid #707070;
-    box-sizing: border-box;
-  }
-  
-  .glow-border-button::after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    /* filter: blur(2.9px); */
-    background: #fbffd4;
-    border-radius: 50%;
-    box-shadow: 0 0 12px #ff371c;
-    animation: move-dot 5s linear infinite;
-  }
   
   @keyframes move-dot {
     0% {
@@ -248,7 +257,7 @@ body {
     align-items: center; /* Vertically align items */
     justify-items: center; /* Horizontally center items */
     padding: 40px; /* Padding around the whole section */
-    background-color: #121212; /* Dark background color */
+    background-color: rgba(17, 17, 17, 0.2); /* Dark background color */
 }
 
 .connect {
@@ -314,11 +323,6 @@ body {
     max-width: 900px;
 }
 
-.contact-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
 
 .case-study {
   display: flex;
@@ -491,32 +495,18 @@ line-height: normal;
   line-height: 1.4;
 }
 
-.contact-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
   
-  .button-content {
-    position: relative;
-    z-index: 1;
-    background-color: #282828;
-    border-radius: 16px;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button-text {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 24px;
-    color: #F5F5F5;
-    margin: 0;
-    text-align: center;
-    text-decoration: none;
-  }
+.button-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  color: #F5F5F5;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
   .aboutme {
     color: #E2DFDF;
@@ -777,7 +767,7 @@ footer {
   .sayhello {
     display: flex;
     flex-direction: column;
-    background-color: #131313;
+    background-color: rgba(17, 17, 17, 0.2);
     background-size: cover;
     
   }
